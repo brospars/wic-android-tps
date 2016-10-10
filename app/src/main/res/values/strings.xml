@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyFirstApp</string>
+    <string name="dialog_title">Dialog Titre</string>
+    <string name="dialog_message">Dialog Message</string>
+    <string name="cancel">Annuler</string>
+    <string name="help">Aide</string>
+    <string name="new_game">Nouveau jeu</string>
+</resources>
