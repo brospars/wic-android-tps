@@ -6,8 +6,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class CycleDeVie extends AppCompatActivity implements View.OnClickListener {
 
@@ -74,5 +76,18 @@ public class CycleDeVie extends AppCompatActivity implements View.OnClickListene
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.test_menu, menu);
         return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case R.id.help:
+                Toast.makeText(this,"HELP Grand Schtroumpf",Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.new_game:
+                Toast.makeText(this,"ezmlhgoefzihz",Toast.LENGTH_SHORT).show();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
