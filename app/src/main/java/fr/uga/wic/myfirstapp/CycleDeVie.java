@@ -1,6 +1,8 @@
 package fr.uga.wic.myfirstapp;
 
 import android.app.DialogFragment;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -81,7 +83,9 @@ public class CycleDeVie extends AppCompatActivity implements View.OnClickListene
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()){
             case R.id.help:
-                Toast.makeText(this,"HELP Grand Schtroumpf",Toast.LENGTH_SHORT).show();
+                //appel à un Intent pour utiliser le telephone
+                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + "0646481603"));
+                startActivity(intent);
                 return true;
             case R.id.new_game:
                 Toast.makeText(this,"ezmlhgoefzihz",Toast.LENGTH_SHORT).show();
